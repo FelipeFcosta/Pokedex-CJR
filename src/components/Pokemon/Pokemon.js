@@ -6,8 +6,7 @@ function Pokemon({pokemon}) {
     let name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
     let kinds = pokemon.kind.split(';')
     let colorKind = Colors[kinds[0]]
-    let colorKindLight = colorKind.concat("AA") 
-    console.log(colorKind)
+    let colorKindLight = colorKind.concat("AA") // cor com transparencia
 
     return (
       <Li background={Colors.pokemonBackground} hoverColor={colorKindLight}>
