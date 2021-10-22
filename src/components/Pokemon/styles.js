@@ -20,8 +20,9 @@ export const Li = styled.li`
     box-shadow: 1px 1px 8px lightgrey;
 
     .pokemon-img {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
+        margin: 16px;
     }
 
     &:hover {

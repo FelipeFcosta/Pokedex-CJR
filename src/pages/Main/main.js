@@ -4,6 +4,11 @@ import Pokemon from '../../components/Pokemon/Pokemon';
 import api from '../../resources/api';
 import { Container, Ul, SearchBar, SearchBtn } from './styles';
 import SearchIcon from "@material-ui/icons/Search";
+<<<<<<< HEAD
+import axios from 'axios';
+=======
+
+>>>>>>> f8b70bfa223f1de077c136a40bafc8d397413245
 
 function Main() {
     const [pokemonPage, setPokemonPage] = useState([])  // dados dos pokemons da pagina
@@ -11,6 +16,14 @@ function Main() {
     const [input, setInput] = useState("")  // pesquisa do usuario
     const [pageInput, setPageInput] = useState(1)  // pagina digitada
     const [currentPage, setCurrentPage] = useState(1)
+    const [inputSearch, setInputSearch] = useState("");
+    const [filter, setFilter] = useState("");
+
+    
+
+    const handleSearchChange = (e) => {
+      setFilter(e.target.value);
+    };
 
     useEffect(() => {
         async function getPokemonPage(){
@@ -58,7 +71,7 @@ function Main() {
     return (
       <Container>
         <h1>Pokédex</h1>
-        <a href="./login">Login</a>
+        <a href="./components/login/">Login</a>
         <form onSubmit={handleSearch} autoComplete="off">
           <SearchBar type="text" placeholder="Pesquise um Pokémon!"
             value={input} onChange={(event) => {setInput(event.target.value)}}/>

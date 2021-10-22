@@ -9,11 +9,10 @@ function Pokemon({pokemon}) {
     let colorKindLight = colorKind.concat("AA") // cor com transparencia
 
     return (
-      <Li background={Colors.pokemonBackground} hoverColor={colorKindLight}>
+      <Li key={pokemon.id} background={Colors.pokemonBackground} hoverColor={colorKindLight}>
         <PokemonId color={colorKind}># {pokemon.id}</PokemonId>
         <strong style={{fontSize: '1.1em'}}>{name}</strong>
-        <img class='pokemon-img' src={pokemon.image_url}/>
-
+        <img className='pokemon-img' draggable='false' src={pokemon.image_url}/>
         <div style={{display: 'inline'}}>
           {kinds.map(kind => <Kind color={Colors[kind]}>{`${kind}`}</Kind>)}
         </div>
